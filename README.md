@@ -88,7 +88,7 @@ The modeled application includes:
 
 ### Threat Model Report
 
-![Threat Model Report](screenshots/03-threat-model-report.png)
+![Threat Model Report](screenshots/03-threat-model-assessment-report.png)
 
 ### Security Requirements
 
