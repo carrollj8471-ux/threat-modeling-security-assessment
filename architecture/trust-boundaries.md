@@ -1,8 +1,8 @@
-\# Trust Boundaries
+# Trust Boundaries
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -14,7 +14,7 @@ These boundaries are important because threats often occur when untrusted data e
 
 
 
-\## Identified Trust Boundaries
+## Identified Trust Boundaries
 
 
 

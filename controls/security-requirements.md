@@ -1,8 +1,8 @@
-\# Security Requirements
+# Security Requirements
 
 
 
-\## Authentication and Session Security
+## Authentication and Session Security
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-\## Authorization
+## Authorization
 
 
 
@@ -40,7 +40,7 @@
 
 
 
-\## Data Protection
+## Data Protection
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-\## Monitoring and Logging
+## Monitoring and Logging
 
 
 
@@ -76,7 +76,7 @@
 
 
 
-\## DevSecOps
+## DevSecOps
 
 
 

@@ -1,8 +1,8 @@
-\# Threat Modeling Methodology
+# Threat Modeling Methodology
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -14,31 +14,31 @@ The objective is to identify design-level security risks before deployment and c
 
 
 
-\## Process
+## Process
 
 
 
-1\. Define the application scenario.
+1. Define the application scenario.
 
-2\. Identify important assets.
+2. Identify important assets.
 
-3\. Create a data flow diagram.
+3. Create a data flow diagram.
 
-4\. Identify trust boundaries.
+4. Identify trust boundaries.
 
-5\. Analyze threats using STRIDE.
+5. Analyze threats using STRIDE.
 
-6\. Assign likelihood and impact scores.
+6. Assign likelihood and impact scores.
 
-7\. Calculate risk scores.
+7. Calculate risk scores.
 
-8\. Map threats to recommended controls.
+8. Map threats to recommended controls.
 
-9\. Produce a security assessment report.
+9. Produce a security assessment report.
 
 
 
-\## Risk Scoring
+## Risk Scoring
 
 
 

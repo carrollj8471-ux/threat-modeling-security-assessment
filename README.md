@@ -1,12 +1,26 @@
-# Threat Modeling Security Assessment
+# 🧩 Threat Modeling Security Assessment
 
-## Overview
+![Focus](https://img.shields.io/badge/Focus-Threat%20Modeling-blue)
+![Methodology](https://img.shields.io/badge/Methodology-STRIDE-purple)
+![Diagrams](https://img.shields.io/badge/Diagrams-Mermaid-teal)
+![Language](https://img.shields.io/badge/Automation-Python-yellow)
+![Type](https://img.shields.io/badge/Type-Security%20Architecture-informational)
+
+A STRIDE-based threat model and security-requirements assessment for a cloud-hosted customer portal — identifying threats, mapping trust boundaries, scoring risk, and tracing threats to controls.
+
+> **TL;DR** — STRIDE analysis of a cloud customer portal: trust boundaries, data-flow analysis, a threat register, attack scenarios, prioritized security requirements, and threat-to-control mapping, output as an automated assessment report.
+
+---
+
+## 📌 Overview
 
 This project demonstrates a threat modeling and security requirements assessment for a fictional cloud-hosted customer portal.
 
 The assessment uses STRIDE to identify threats, document trust boundaries, score risk, map threats to security controls, and generate a professional threat model report.
 
-## Scenario
+---
+
+## 🗺️ Scenario
 
 The modeled application includes:
 
@@ -22,7 +36,50 @@ The modeled application includes:
 - CI/CD pipeline
 - Cloud deployment environment
 
-## Tools Used
+---
+
+## 🗺️ Data Flow & Trust Boundaries
+
+```mermaid
+flowchart TB
+    subgraph INET["🌐 Internet (Untrusted)"]
+        CUST["Customer Browser"]
+        ADM["Admin User"]
+    end
+
+    subgraph APP["🔒 Application Tier"]
+        WEB["Web Application"]
+        API["API Backend"]
+        AUTH["Authentication Service"]
+        ADMP["Admin Portal"]
+    end
+
+    subgraph DATA["🗄️ Data Tier"]
+        DB["Customer Database"]
+        OBJ["Object Storage"]
+    end
+
+    subgraph OPS["📊 Monitoring / CI-CD"]
+        SIEM["Logging / SIEM"]
+        CICD["CI/CD Pipeline"]
+    end
+
+    CUST -->|HTTPS| WEB
+    ADM -->|HTTPS| ADMP
+    WEB --> API
+    ADMP --> API
+    API --> AUTH
+    API --> DB
+    API --> OBJ
+    API -.logs.-> SIEM
+    CICD -.deploys.-> WEB
+```
+
+Each boundary between subgraphs is a **trust boundary** where STRIDE threats are analyzed (e.g. spoofing at the Internet → Application edge, tampering/EoP at the Application → Data edge).
+
+---
+
+## 🧰 Tools Used
 
 - STRIDE methodology
 - Markdown
@@ -31,7 +88,9 @@ The modeled application includes:
 - Mermaid diagrams
 - GitHub
 
-## Skills Demonstrated
+---
+
+## 🧠 Skills Demonstrated
 
 - Threat modeling
 - Security architecture review
@@ -44,28 +103,23 @@ The modeled application includes:
 - Security requirements definition
 - Professional security reporting
 
+---
 
-## Project Structure
+## 📁 Project Structure
 
 | Folder | Description |
-
 |---|---|
-
 | architecture | Data flow diagram and trust boundary documentation |
-
 | threat-model | STRIDE analysis, attack scenarios, and threat register |
-
 | controls | Security requirements and threat-to-control mapping |
-
 | reports | Generated threat model assessment report |
-
 | scripts | Python report generation script |
-
 | notes | Methodology documentation |
-
 | screenshots | Project evidence screenshots |
 
-## Key Deliverables
+---
+
+## 📦 Key Deliverables
 
 - Data flow diagram
 - Trust boundary analysis
@@ -76,7 +130,9 @@ The modeled application includes:
 - Threat-to-control mapping
 - Automated assessment report
 
-## Screenshots
+---
+
+## 📸 Screenshots
 
 ### Data Flow Diagram
 
@@ -94,9 +150,12 @@ The modeled application includes:
 
 ![Security Requirements](screenshots/04-security-requirements.png)
 
-## Security Takeaway
+---
+
+## 🔑 Security Takeaway
 
 Threat modeling helps identify security risks before deployment. This project demonstrates how security engineering can turn architecture review into actionable security requirements, prioritized controls, and risk-based remediation planning.
 
+---
 
-
+*Author: Josh · Security Architecture portfolio project*

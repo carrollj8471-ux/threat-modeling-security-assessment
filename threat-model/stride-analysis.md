@@ -1,8 +1,8 @@
-\# STRIDE Threat Analysis
+# STRIDE Threat Analysis
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -32,7 +32,7 @@ STRIDE categories:
 
 
 
-\## STRIDE Findings Summary
+## STRIDE Findings Summary
 
 
 
@@ -54,7 +54,7 @@ STRIDE categories:
 
 
 
-\## Security Engineering Value
+## Security Engineering Value
 
 
 

@@ -1,8 +1,8 @@
-\# Attack Scenarios
+# Attack Scenarios
 
 
 
-\## Scenario 1: Broken Object-Level Authorization
+## Scenario 1: Broken Object-Level Authorization
 
 
 
@@ -10,51 +10,51 @@ An authenticated user modifies an API request by changing a customer identifier.
 
 
 
-\### Attack Path
+### Attack Path
 
 
 
-1\. Attacker logs into a valid account.
+1. Attacker logs into a valid account.
 
-2\. Attacker intercepts an API request.
+2. Attacker intercepts an API request.
 
-3\. Attacker changes `customer\_id` or object reference.
+3. Attacker changes `customer_id` or object reference.
 
-4\. API returns another customer's data because object-level authorization is missing.
-
-
-
-\### Impact
+4. API returns another customer's data because object-level authorization is missing.
 
 
 
-\- Customer data exposure
-
-\- Privacy violation
-
-\- Regulatory and reputational risk
+### Impact
 
 
 
-\### Recommended Controls
+- Customer data exposure
+
+- Privacy violation
+
+- Regulatory and reputational risk
 
 
 
-\- Enforce object-level authorization on every request
-
-\- Use deny-by-default access checks
-
-\- Add automated authorization test cases
-
-\- Log authorization failures
+### Recommended Controls
 
 
 
-\---
+- Enforce object-level authorization on every request
+
+- Use deny-by-default access checks
+
+- Add automated authorization test cases
+
+- Log authorization failures
 
 
 
-\## Scenario 2: CI/CD Secret Exposure
+---
+
+
+
+## Scenario 2: CI/CD Secret Exposure
 
 
 
@@ -62,53 +62,53 @@ A developer accidentally commits a cloud access key into the repository.
 
 
 
-\### Attack Path
+### Attack Path
 
 
 
-1\. Secret is committed to GitHub.
+1. Secret is committed to GitHub.
 
-2\. Attacker discovers the exposed secret.
+2. Attacker discovers the exposed secret.
 
-3\. Attacker uses the secret to access cloud resources.
+3. Attacker uses the secret to access cloud resources.
 
-4\. Attacker modifies infrastructure or extracts data.
-
-
-
-\### Impact
+4. Attacker modifies infrastructure or extracts data.
 
 
 
-\- Cloud account compromise
-
-\- Unauthorized deployment changes
-
-\- Data exposure
+### Impact
 
 
 
-\### Recommended Controls
+- Cloud account compromise
+
+- Unauthorized deployment changes
+
+- Data exposure
 
 
 
-\- Secret scanning
-
-\- Pre-commit hooks
-
-\- Secret vaulting
-
-\- Immediate secret rotation
-
-\- Least privilege IAM
+### Recommended Controls
 
 
 
-\---
+- Secret scanning
+
+- Pre-commit hooks
+
+- Secret vaulting
+
+- Immediate secret rotation
+
+- Least privilege IAM
 
 
 
-\## Scenario 3: Public Object Storage Exposure
+---
+
+
+
+## Scenario 3: Public Object Storage Exposure
 
 
 
@@ -116,43 +116,43 @@ A storage bucket is configured for public access.
 
 
 
-\### Attack Path
+### Attack Path
 
 
 
-1\. Uploaded customer files are stored in object storage.
+1. Uploaded customer files are stored in object storage.
 
-2\. Bucket or container policy allows public read access.
+2. Bucket or container policy allows public read access.
 
-3\. Attacker accesses files without authentication.
-
-
-
-\### Impact
+3. Attacker accesses files without authentication.
 
 
 
-\- Sensitive document exposure
-
-\- Compliance risk
-
-\- Customer trust impact
+### Impact
 
 
 
-\### Recommended Controls
+- Sensitive document exposure
+
+- Compliance risk
+
+- Customer trust impact
 
 
 
-\- Private bucket policies
+### Recommended Controls
 
-\- Block public access
 
-\- Encryption at rest
 
-\- Storage access logging
+- Private bucket policies
 
-\- Cloud security posture checks
+- Block public access
+
+- Encryption at rest
+
+- Storage access logging
+
+- Cloud security posture checks
 
 
 
